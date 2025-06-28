@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jibaek-gh-action-demo-app-deployment
+  labels:
+    app: jibaek-gh-action-demo-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jibaek-gh-action-demo-app
+  template:
+    metadata:
+      labels:
+        app: jibaek-gh-action-demo-app
+    spec:
+      containers:
+      - name: jibaek-gh-action-demo-app
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-gh-action-demo-app/app:a743103
+        ports:
+        - containerPort: 80
