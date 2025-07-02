@@ -5,7 +5,7 @@ metadata:
   labels:
     app: jibaek-woodoku-app
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: jibaek-woodoku-app
@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: jibaek-woodoku-app
-        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-woodoku/app:latest
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-woodoku/woodoku:latest
         ports:
         - containerPort: 80
