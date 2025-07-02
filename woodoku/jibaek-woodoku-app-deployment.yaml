@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: jibaek-woodoku-app
-        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-woodoku/woodoku:latest
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-woodoku/woodoku:dev-20250702-5a5c62555b
         ports:
         - containerPort: 80
