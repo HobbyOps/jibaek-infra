@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jibaek-woodoku-app-deployment
+  labels:
+    app: jibaek-woodoku-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: jibaek-woodoku-app
+  template:
+    metadata:
+      labels:
+        app: jibaek-woodoku-app
+    spec:
+      containers:
+      - name: jibaek-woodoku-app
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-woodoku/app:latest
+        ports:
+        - containerPort: 80

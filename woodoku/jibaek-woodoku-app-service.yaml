@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: jibaek-woodoku-app-service
+spec:
+  selector:
+    app: jibaek-woodoku-app
+  ports:
+    - protocol: TCP
+      port: 8889
+      targetPort: 80
