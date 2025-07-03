@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: jibaek-woodoku-app-service
 spec:
+  type: NodePort
   selector:
     app: jibaek-woodoku-app
   ports:
