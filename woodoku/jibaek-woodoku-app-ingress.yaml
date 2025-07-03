@@ -2,12 +2,12 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: jibaek-woodoku-app-ingress
-  annotations:
-    # If the class annotation is not specified it defaults to "gce".
-    kubernetes.io/ingress.class: "gce"
+  namespace: jibaek
 spec:
+  ingressClassName: gce
   rules:
-  - http:
+  - host: "*"
+    http:
       paths:
       - path: /
         pathType: ImplementationSpecific
