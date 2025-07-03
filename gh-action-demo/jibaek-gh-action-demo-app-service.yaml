@@ -3,6 +3,7 @@ kind: Service
 metadata:
   name: jibaek-gh-action-demo-app-service
 spec:
+  type: NodePort
   selector:
     app: jibaek-gh-action-demo-app
   ports:
