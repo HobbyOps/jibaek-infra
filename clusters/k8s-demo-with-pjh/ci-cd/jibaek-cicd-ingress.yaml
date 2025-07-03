@@ -1,28 +1,31 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: jibaek-app-ingress
-  namespace: jibaek
+  name: jibaek-cicd-ingress
+  namespace: jibaek-cicd
   annotations:
     # If the class annotation is not specified it defaults to "gce".
     kubernetes.io/ingress.class: "gce"
 spec:
   ingressClassName: gce
   rules:
-  - host: "woodoku.baekjaein.com"
+  - host: "jenkins.baekjaein.com"
     http:
       paths:
       - path: /
         pathType: Prefix
         backend:
           service:
-            name: jibaek-woodoku-app-service
+            name: jenkins
             port:
-              number: 8080
-      - path: /gh-action-demo
+              number: 80
+  - host: "argocd.baekjaein.com"
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
-            name: jibaek-gh-action-demo-app-service
+            name: jibaek-argocd-server
             port:
-              number: 8888
+              number: 80

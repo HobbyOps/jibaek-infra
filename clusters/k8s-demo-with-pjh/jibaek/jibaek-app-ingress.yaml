@@ -19,7 +19,10 @@ spec:
             name: jibaek-woodoku-app-service
             port:
               number: 8080
-      - path: /gh-action-demo
+  - host: "gh-action.baekjaein.com"
+    http:
+      paths:
+      - path: /
         pathType: Prefix
         backend:
           service:
