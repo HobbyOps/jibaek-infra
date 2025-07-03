@@ -6,11 +6,11 @@ metadata:
 spec:
   ingressClassName: gce
   rules:
-  - host: "*.baekjaein.com"
+  - host: "woodoku.baekjaein.com"
     http:
       paths:
-      - path: /*
-        pathType: ImplementationSpecific
+      - path: /
+        pathType: Prefix
         backend:
           service:
             name: jibaek-woodoku-app-service
