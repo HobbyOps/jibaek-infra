@@ -3,6 +3,9 @@ kind: Ingress
 metadata:
   name: jibaek-woodoku-app-ingress
   namespace: jibaek
+  annotations:
+    # If the class annotation is not specified it defaults to "gce".
+    kubernetes.io/ingress.class: "gce"
 spec:
   ingressClassName: gce
   rules:
