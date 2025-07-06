@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: jibaek-gh-action-demo-app
-        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-gh-action-demo-app/app:834a3b6
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-gh-action-demo-app/app:8cbdec1
         ports:
         - containerPort: 80
