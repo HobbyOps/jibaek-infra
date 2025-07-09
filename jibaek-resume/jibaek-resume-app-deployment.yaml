@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jibaek-resume-app-deployment
+  labels:
+    app: jibaek-resume-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: jibaek-resume-app
+  template:
+    metadata:
+      labels:
+        app: jibaek-resume-app
+    spec:
+      containers:
+      - name: jibaek-resume-app
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-resume/resume:dev-20250702-5a5c62555b
+        ports:
+        - containerPort: 80
