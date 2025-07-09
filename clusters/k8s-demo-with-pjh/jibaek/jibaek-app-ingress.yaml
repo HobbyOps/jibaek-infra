@@ -19,6 +19,21 @@ spec:
             name: jibaek-woodoku-app-service
             port:
               number: 8080
+  - host: "resume.baekjaein.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: jibaek-resume-app-service
+            port:
+              number: 8080
+        backend:
+          service:
+            name: jibaek-woodoku-app-service
+            port:
+              number: 8080
   - host: "gh-action.baekjaein.com"
     http:
       paths:
