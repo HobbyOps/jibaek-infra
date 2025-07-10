@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: jibaek-resume-app
-        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-resume/resume:dev-20250710-3b8cd84e16
+        image: asia-northeast3-docker.pkg.dev/astute-curve-461807-v0/jibaek-resume/resume:prod-20250710-a0abf4d745
         ports:
         - containerPort: 80
